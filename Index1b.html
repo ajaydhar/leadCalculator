@@ -1,0 +1,159 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Task Calculator</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Oxygen:wght@300;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.3/themes/ui-lightness/jquery-ui.css" />
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+
+        <div class="navbar-brand">
+          <h1>Lead Task Calculator</h1>
+        </div>
+        <div class="navbar-header">
+          <a href="Index1.html" class="">
+            <div id="logo-img" alt="Logo image"></div>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <div id="main-content" class="container">
+    <form>
+
+      <header>
+        <nav id="header1-nav" class="navbar navbar-default">
+          <div class="navbar-brand">
+          </div>
+        </nav>
+
+      </header>
+
+      <div class="container">
+
+        <div class="row align-items-center mt-3 mb-4">
+          <div class="col-4">
+            <label for="Employee Name" class="inputLabel">Employee Details</label>
+
+          </div>
+          <div class="col-8">
+
+
+            <input type="text" class="w-100 border rounded" name="Employee" id="myautocomplete"
+              placeholder="Employee Name">
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-4">
+          </div>
+<script>
+function BUExisting(){
+var select = document.getElementById("arr");
+        var BUs = ['Apps', 'FS', 'INVENT', 'CIS', 'BSVNL', 'SSC', 'I&D', 'Sogeti', 'DEMS', 'Academy'];
+            for (var i = 0; i < BUs.length; i++) {
+                var optn = BUs[i];
+                var el = document.createElement("option");
+                el.textContent = optn;
+                el.value = optn;
+                select.appendChild(el);
+            }
+}
+</script>
+
+          <div class="col-8">
+
+            <fieldset class="border p-2 container rounded">
+              <legend class="w-auto box2">Project Specifications</legend>
+              <div class="row mt-1 mb-2">
+                <div class="col-6 custom-control custom-radio">
+                  <input class="custom-control-input" type="radio" id="customRadio1" name="group1" value="NP"><label
+                    class="custom-control-label radio-label-ml" for="customRadio1">New Project</label>
+                </div>
+                <div class="col-6 custom-control custom-radio">
+                  <input onclick="BUExisting()" class="custom-control-input" type="radio" id="customRadio2" name="group1" value="EPC"><label
+                    class="custom-control-label radio-label-ml" for="customRadio2">Existing Project</label>
+                </div>
+              </div>
+              <div class="row mt-3 mb-2">
+                <div class="col-6 custom-control custom-radio">
+                  <input class="custom-control-input" type="radio" id="customRadio3" name="BT-NBT" value="BT"><label
+                    class="custom-control-label radio-label-ml" for="customRadio3">Billable</label>
+                </div>
+                <div class="col-6 custom-control custom-radio">
+                  <input type="radio" id="customRadio4" name="BT-NBT" value="NBT" class="custom-control-input">
+                  <label class="custom-control-label radio-label-ml" for="customRadio4">Non-Billable</label>
+                </div>
+              </div>
+          </div>
+          </fieldset>
+        </div>
+
+        <div class="row align-items-center mt-4 mb-4">
+          <div class="col-4">
+            <label for="Project PU" class="inputLabel">Project PU</label>
+          </div>
+          <div class="col-8">
+            <input type="text" class="w-100 border rounded" name="Employee" id="myPUautocomplete"
+              placeholder="Production Unit">
+			      <select id="arr"></select>
+          </div>
+        </div>
+        <div class="row align-items-center mt-4 mb-4">
+          <div class="col-4">
+            <label for="Bill Rate" class="inputLabel">Bill Rate</label>
+          </div>
+          <div class="col-8">
+
+            <input class="w-100 border rounded billrate" type="integer" placeholder="hourly rate" id="Bill Rate"
+              name="Bill Rate">
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="address">
+          <span>Business Operations(businessoperationsbunl.bnl@capgemini.com)</span>
+        </section>
+      </div>
+    </div>
+  </footer>
+
+  <!--jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/script.js"></script>
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="LTCScript.js"></script>
+
+
+</body>
+
+</html>
